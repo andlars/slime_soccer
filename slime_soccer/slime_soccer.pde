@@ -19,7 +19,7 @@ void draw() {
 }
 
 void keyPressed() {
-  if (key == 'w') {
+  if (key == 'w' && s.x.y == height) {
     s.jump = true;
   }
   if (key == 'a') {
