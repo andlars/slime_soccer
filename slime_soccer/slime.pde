@@ -14,7 +14,7 @@ class slime {
 
   void render() {
     noStroke();
-    fill(0, 255, 0);
+    fill(255, 0, 0);
     ellipse(x.x, x.y, 2*r, 2*r);
     fill(255);
     rect(x.x-r, x.y, 2*r, r);
@@ -23,6 +23,13 @@ class slime {
     noStroke();
     fill(0);
     ellipse(x.x+s.r/2+6.125, x.y-s.r/2, 12.5, 12.5);
+    noStroke();
+    fill(255);
+    rect(x.x-s.r/2, x.y-s.r+10, 8, 50, 20);
+    noStroke();
+    fill(255);
+    rect(x.x-s.r+7, x.y-s.r/2, 68, 8, 20);
+    
   }
 
   void update() {
