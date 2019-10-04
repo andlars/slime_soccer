@@ -18,6 +18,11 @@ class slime {
     ellipse(x.x, x.y, 2*r, 2*r);
     fill(255);
     rect(x.x-r, x.y, 2*r, r);
+    stroke(1);
+    ellipse(x.x+s.r/2, x.y-s.r/2, 25, 25);
+    noStroke();
+    fill(0);
+    ellipse(x.x+s.r/2+6.125, x.y-s.r/2, 12.5, 12.5);
   }
 
   void update() {
