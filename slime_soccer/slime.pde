@@ -29,12 +29,11 @@ class slime {
     noStroke();
     fill(255);
     rect(x.x-s.r+7, x.y-s.r/2, 68, 8, 20);
-    
   }
 
   void update() {
     v.y += g;
-    
+
     if (moveLeft) {
       v.x += -8;
     }
@@ -51,8 +50,15 @@ class slime {
     if ( x.y > height) {
       x.y = height;
       v.y = 0;
-    }
-
+    } 
     v.x = 0;
+    if (x.x + r > width) {
+      x.x = width - r;
+      v.x = -v.x;
+    }
+    if (x.x - r < 0) {
+      x.x = 0 + r;
+      v.x = -v.x;
+    }
   }
 }
