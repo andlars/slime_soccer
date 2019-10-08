@@ -1,16 +1,18 @@
 float g = 0.65;
 ball b;
 slime s;
+PImage photo;
 
 void setup() {
   size(1125, 520);
   b = new ball();
   s = new slime();
+  photo = loadImage("mål1.png");
 }
 
 void draw() {
   background(255);
-
+image(photo,-100,270,250,250);
   s.render();
   b.render();
 
