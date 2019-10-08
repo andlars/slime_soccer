@@ -1,4 +1,4 @@
-class slime {
+ class slime {
   PVector x, v;
   float r;
   boolean jump, moveLeft, moveRight;
