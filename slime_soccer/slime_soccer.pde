@@ -17,6 +17,11 @@ void draw() {
 
   s.update();
   b.update();
+  stroke(0);
+  noFill();
+  strokeWeight(5);
+  rect(-10, 320, 80, 300);
+  strokeWeight(2);
 }
 
 void keyPressed() {
