@@ -1,9 +1,9 @@
-float g = 0.3;
+float g = 0.5;
 ball b;
 slime s;
 
 void setup() {
-  size(1000, 600);
+  size(865, 450);
   b = new ball();
   s = new slime();
 }
