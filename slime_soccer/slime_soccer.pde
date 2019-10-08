@@ -12,13 +12,13 @@ void setup() {
 
 void draw() {
   background(255);
-image(photo,-100,270,250,250);
-image(photo,975,270,250,250);
   s.render();
   b.render();
 
   s.update();
   b.update();
+  image(photo,0,400,70,120);
+image(photo,width-70,400,70,120);
 }
 
 void keyPressed() {
