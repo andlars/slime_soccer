@@ -1,3 +1,4 @@
+int score;
 float g = 0.5;
 ball b;
 slime s;

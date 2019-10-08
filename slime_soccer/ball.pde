@@ -12,6 +12,10 @@ class ball {
     noStroke();
     fill(255, 0, 0);
     ellipse(x.x, x.y, 2*r, 2*r);
+    fill(0);
+    textSize(30);
+    textAlign(CENTER);
+    text("Scoren er "+score,width/2,50);
   }
 
   void update() {
