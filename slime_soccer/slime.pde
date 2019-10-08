@@ -13,22 +13,20 @@ class slime {
   }
 
   void render() {
-    noStroke();
+    // Slime-objekt med omrids
     fill(255, 0, 0);
-    ellipse(x.x, x.y, 2*r, 2*r);
+    stroke(0);
+    arc(x.x, x.y, 2*r, 2*r, PI, 2*PI, CHORD);
+    
+    // Outer eye
     fill(255);
-    rect(x.x-r, x.y, 2*r, r);
     stroke(1);
     ellipse(x.x+s.r/2, x.y-s.r/2, 25, 25);
+
+    //Pupil
     noStroke();
     fill(0);
     ellipse(x.x+s.r/2+6.125, x.y-s.r/2, 12.5, 12.5);
-    noStroke();
-    fill(255);
-    rect(x.x-s.r/2, x.y-s.r+10, 8, 50, 20);
-    noStroke();
-    fill(255);
-    rect(x.x-s.r+7, x.y-s.r/2, 68, 8, 20);
   }
 
   void update() {
