@@ -4,7 +4,7 @@ class slime {
   boolean jump, moveLeft, moveRight;
 
   slime() {
-    r = 100;
+    r = 65;
     x = new PVector(100, 100);
     v = new PVector(0, 0);
     jump = false;
@@ -15,9 +15,12 @@ class slime {
   void render() {
     noStroke();
     fill(0, 255, 0);
-    ellipse(x.x, x.y, 2*r, 2*r);
+    arc(x.x, x.y, 2*r, 2*r, PI, TWO_PI);
+    stroke(0);
     fill(255);
-    rect(x.x-r, x.y, 2*r, r);
+    ellipse(x.x+40, x.y-42, 0.5*r, 0.5*r);
+    fill(0);
+    ellipse(x.x+48, x.y-42, 0.2*r, 0.2*r);
   }
 
   void update() {

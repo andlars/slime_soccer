@@ -5,13 +5,17 @@ class ball {
   ball() {
     x = new PVector(width/2,height/2);
     v = new PVector(0,0);
-    r = 40;
+    r = 20;
   }
 
   void render() {
     noStroke();
     fill(255, 0, 0);
     ellipse(x.x, x.y, 2*r, 2*r);
+    fill(0);
+    textSize(30);
+    textAlign(CENTER);
+    text("Scoren er "+score,width/2,50);
   }
 
   void update() {
@@ -32,6 +36,14 @@ class ball {
     if (x.y + r > height) {
       x.y = height - r;
       v.y = -v.y;
+    }
+    if (x.x + r > width) {
+      x.x = width - r;
+      v.x = -v.x;
+    }
+    if (x.x - r < 0) {
+      x.x = 0 + r;
+      v.x = -v.x;
     }
   }
 
