@@ -36,10 +36,12 @@ class ball {
     
     if (x.x + r > width) {
      v.x = - v.x;
+     x.x = width-r;
     }
     
     if (x.x - r < width-width) {
      v.x = - v.x;
+     x.x = r;
     }
     
   }
@@ -53,4 +55,13 @@ class ball {
     x.add(s.v);
     v.mult(1.5);
   }
+
+//Mål
+void goal(){
+if(x.x <= 70 && x.y - r >= 400) {
+
+
+ // set(scoreboard = true);
+}
+}
 }
