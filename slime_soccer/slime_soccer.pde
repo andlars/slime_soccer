@@ -1,3 +1,4 @@
+int score;
 float g = 0.65;
 ball b;
 slime s;
@@ -7,11 +8,23 @@ void setup() {
   size(1125, 520);
   b = new ball();
   s = new slime();
+
+  textAlign(CENTER);
+  score = 0;
+
   photo = loadImage("mål1.png");
+
 }
 
 void draw() {
   background(255);
+
+  fill(0);
+textSize(40);
+text(score, width/4, 30);
+text(score, 0.75*width, 30);
+
+
   s.render();
   b.render();
 
