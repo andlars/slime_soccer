@@ -13,10 +13,6 @@ void setup() {
   photo = loadImage("mål1.png");
   textSize(50);
   startTime = millis()/1000 + countdown;
-
-  if (countdown <= 0) {
-    exit();
-  }
 }
 
 void draw() {
