@@ -13,16 +13,25 @@
   }
 
   void render() {
-    noStroke();
-    fill(0, 255, 0);
-    ellipse(x.x, x.y, 2*r, 2*r);
+    // Slime-objekt med omrids
+    fill(255, 0, 0);
+    stroke(0);
+    arc(x.x, x.y, 2*r, 2*r, PI, 2*PI, CHORD);
+    
+    // Outer eye
     fill(255);
-    rect(x.x-r, x.y, 2*r, r);
+    stroke(1);
+    ellipse(x.x+s.r/2, x.y-s.r/2, 25, 25);
+
+    //Pupil
+    noStroke();
+    fill(0);
+    ellipse(x.x+s.r/2+6.125, x.y-s.r/2, 12.5, 12.5);
   }
 
   void update() {
     v.y += g;
-    
+
     if (moveLeft) {
       v.x += -8;
     }
@@ -39,8 +48,15 @@
     if ( x.y > height) {
       x.y = height;
       v.y = 0;
-    }
-
+    } 
     v.x = 0;
+    if (x.x + r > width) {
+      x.x = width - r;
+      v.x = -v.x;
+    }
+    if (x.x - r < 0) {
+      x.x = 0 + r;
+      v.x = -v.x;
+    }
   }
 }

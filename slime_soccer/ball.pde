@@ -3,9 +3,11 @@ class ball {
   float r;
 
   ball() {
-    x = new PVector(width/2, height/2);
-    v = new PVector(0, 0);
-    r = 25;
+
+    x = new PVector(width/2,height/2);
+    v = new PVector(0,0);
+    r = 15;
+
   }
 
   void render() {
