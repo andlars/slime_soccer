@@ -1,4 +1,4 @@
-int score;
+int score, score_2;
 float g = 0.65;
 ball b;
 slime s;
@@ -22,7 +22,7 @@ void draw() {
   fill(0);
 textSize(40);
 text(score, width/4, 30);
-text(score, 0.75*width, 30);
+text(score_2, 0.75*width, 30);
 
 
   s.render();
@@ -32,6 +32,14 @@ text(score, 0.75*width, 30);
   b.update();
   image(photo,0,400,70,120);
 image(photo,width-70,400,70,120);
+
+if (b.x.x - 15 <= 0 && b.x.y >= 400){
+ score = score + 1; 
+}
+ 
+ if (b.x.x + 15 >= width && b.x.y >= 400){
+ score_2 = score_2 + 1;
+ }
 }
 
 void keyPressed() {
