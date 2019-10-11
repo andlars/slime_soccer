@@ -5,7 +5,7 @@ class ball {
   ball() {
     x = new PVector(width/2,height/2);
     v = new PVector(0,0);
-    r = 40;
+    r = 15;
   }
 
   void render() {
@@ -33,6 +33,17 @@ class ball {
       x.y = height - r;
       v.y = -v.y;
     }
+    
+    if (x.x + r > width) {
+     v.x = - v.x;
+     x.x = width-r;
+    }
+    
+    if (x.x - r < width-width) {
+     v.x = - v.x;
+     x.x = r;
+    }
+    
   }
 
   void bounce(slime s) {
@@ -44,4 +55,13 @@ class ball {
     x.add(s.v);
     v.mult(1.5);
   }
+
+//Mål
+void goal(){
+if(x.x <= 70 && x.y - r >= 400) {
+
+
+ // set(scoreboard = true);
+}
+}
 }
