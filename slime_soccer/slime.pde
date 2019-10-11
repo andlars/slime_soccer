@@ -30,16 +30,16 @@
   }
 
   void update() {
-    v.y += g;
+    v.y += g*1.7;
 
     if (moveLeft) {
-      v.x += -8;
+      v.x += -9;
     }
     if (moveRight) {
-      v.x += 8;
+      v.x += 9;
     }
     if (jump && x.y == height) {
-      v.y = -10;
+      v.y = -20;
       jump = false;
     }
 

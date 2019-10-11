@@ -3,12 +3,15 @@ class ball {
   float r;
 
   ball() {
+
     x = new PVector(width/2,height/2);
     v = new PVector(0,0);
     r = 15;
+
   }
 
   void render() {
+
     noStroke();
     fill(255, 0, 0);
     ellipse(x.x, x.y, 2*r, 2*r);
@@ -19,13 +22,13 @@ class ball {
       bounce(s);
     } else {
       v.mult(0.99);
-      v.y += g;
+      v.y += g*0.5;
     }
-    
+
     if (x.y == 0) {
       v.mult(0.7);
     }
-    
+
     v.limit(20);
     x.add(v);
 
@@ -33,17 +36,16 @@ class ball {
       x.y = height - r;
       v.y = -v.y;
     }
-    
+
     if (x.x + r > width) {
-     v.x = - v.x;
-     x.x = width-r;
+      v.x = - v.x;
+      x.x = width-r;
     }
-    
+
     if (x.x - r < width-width) {
-     v.x = - v.x;
-     x.x = r;
+      v.x = - v.x;
+      x.x = r;
     }
-    
   }
 
   void bounce(slime s) {
@@ -55,13 +57,5 @@ class ball {
     x.add(s.v);
     v.mult(1.5);
   }
-
-//Mål
-void goal(){
-if(x.x <= 70 && x.y - r >= 400) {
-
-
- // set(scoreboard = true);
 }
-}
-}
+  
