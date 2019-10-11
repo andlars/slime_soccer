@@ -22,7 +22,7 @@ class ball {
       bounce(s);
     } else {
       v.mult(0.99);
-      v.y += g;
+      v.y += g*0.5;
     }
 
     if (x.y == 0) {
